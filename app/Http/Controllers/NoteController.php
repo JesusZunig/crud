@@ -7,9 +7,20 @@ use App\Models\Note;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
 use App\Http\Requests\NoteRequest;
+use App\Http\Requests\SelectRequest;
 
 class NoteController extends Controller
 {
+
+  public function select(): View
+  {
+    return view('select.select');
+  }
+
+  public function request(SelectRequest $request)
+  {
+    dd($request);
+  }
   
   public function index(): View
   {
